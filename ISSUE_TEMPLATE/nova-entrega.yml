@@ -1,0 +1,79 @@
+name: "🎓 Nova entrega educacional"
+description: Proponha um curso, workshop, palestra, evento ou material.
+title: "[ENTREGA] "
+labels: ["entrega"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Os campos abaixo viram o nome do repositório e as custom properties da entrega.
+        Consulte as [normas](https://github.com/c4u-edu/.github/blob/HEAD/CONTRIBUTING.md)
+        se tiver dúvida sobre o formato.
+  - type: input
+    id: titulo
+    attributes:
+      label: 📝 Título da entrega
+      placeholder: "Ex: Workshop de Go para APIs"
+    validations:
+      required: true
+  - type: dropdown
+    id: formato
+    attributes:
+      label: 🎯 Formato
+      description: |
+        Na dúvida: treinamento in-company é `curso`; hackathon é `evento`;
+        conteúdo sem realização (ebook, exercícios, artigo) é `material`.
+      options:
+        - curso
+        - workshop
+        - palestra
+        - evento
+        - material
+    validations:
+      required: true
+  - type: input
+    id: tema
+    attributes:
+      label: 📚 Tema
+      description: O assunto, em kebab-case. Vira o segmento do meio no nome do repositório.
+      placeholder: "Ex: go, ia-generativa, arquitetura-de-software"
+    validations:
+      required: true
+  - type: input
+    id: contexto
+    attributes:
+      label: 🏛️ Contexto
+      description: Quem contrata ou hospeda. Use `c4u` em iniciativa própria; o identificador do cliente, parceiro ou evento anfitrião nos demais.
+      placeholder: "Ex: c4u, acme, tdc"
+    validations:
+      required: true
+  - type: input
+    id: publico
+    attributes:
+      label: 👥 Público-alvo
+      placeholder: "Ex: Time de engenharia da Acme (in-company), público aberto, alunos de graduação"
+    validations:
+      required: true
+  - type: input
+    id: data
+    attributes:
+      label: 📅 Data prevista
+      description: Formato AAAA-MM-DD.
+      placeholder: "2026-03-12"
+    validations:
+      required: true
+  - type: textarea
+    id: descricao
+    attributes:
+      label: 🗒️ Descrição
+      description: O que a entrega cobre, carga horária prevista e pré-requisitos.
+    validations:
+      required: true
+  - type: checkboxes
+    id: visibilidade
+    attributes:
+      label: 🔒 Visibilidade
+      description: Repositórios nascem públicos. Marque apenas se houver motivo para o contrário.
+      options:
+        - label: Esta entrega precisa nascer privada (contém material, dados ou propriedade intelectual de cliente)
+          required: false

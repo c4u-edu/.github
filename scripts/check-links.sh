@@ -13,7 +13,8 @@ fi
 
 # Regra 2: arquivos renderizados fora da raiz do repositório só podem usar URL absoluta.
 # profile/README.md renderiza em github.com/c4u-edu, onde um link relativo quebra.
-for arquivo in profile/README.md; do
+# PULL_REQUEST_TEMPLATE renderiza no repositório consumidor.
+for arquivo in profile/README.md PULL_REQUEST_TEMPLATE/pull_request_template.md; do
   if [ ! -f "$arquivo" ]; then
     echo "FALHA: $arquivo não existe"
     falhas=$((falhas + 1))

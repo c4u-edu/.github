@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Suporte, acesso, matrícula e certificado (E-mail)
+    url: mailto:support@edu.coding4u.tech
+    about: Assuntos que não cabem em uma Issue pública.
+  - name: 🔒 Exposição de dados ou credenciais (E-mail)
+    url: mailto:security@edu.coding4u.tech
+    about: Não abra Issue pública para isso.

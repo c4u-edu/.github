@@ -1,0 +1,39 @@
+name: "✏️ Correção em material publicado"
+description: Reporte um erro, link quebrado ou melhoria em material já publicado.
+title: "[CORREÇÃO] "
+labels: ["correção"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Se o problema é em uma entrega específica, prefira abrir a Issue no repositório
+        dela. Use este formulário quando não souber onde abrir ou quando o problema
+        atravessar várias entregas.
+  - type: input
+    id: repositorio
+    attributes:
+      label: 📦 Repositório afetado
+      placeholder: "Ex: c4u-go-workshop"
+    validations:
+      required: true
+  - type: input
+    id: arquivo
+    attributes:
+      label: 📄 Arquivo ou seção
+      placeholder: "Ex: slides/modulo-03.pdf, página 12"
+    validations:
+      required: true
+  - type: textarea
+    id: problema
+    attributes:
+      label: ❌ O que está errado
+      description: Descreva o erro. Se for código que não roda, cole a mensagem de erro.
+    validations:
+      required: true
+  - type: textarea
+    id: sugestao
+    attributes:
+      label: ✅ Sugestão de correção
+      description: Opcional, mas acelera muito.
+    validations:
+      required: false
