@@ -6,11 +6,16 @@ Regras de plataforma versionadas como código.
 | :--- | :--- | :--- |
 | `org-repo-naming.json` | Organização | Dormente — rulesets de organização exigem o plano Team |
 | `org-branch-protection.json` | Organização | Dormente — mesmo motivo |
-| `repo-github-default.json` | Repositório `.github` | **Aplicado** — rulesets de repositório são gratuitos em repositórios públicos |
+| `repo-github-default.json` | Repositório `.github` | **Aplicado na publicação** — ver nota abaixo |
 
-Rulesets de **organização** exigem o plano Team. Verificado contra a API: `gh api orgs/c4u-edu/rulesets` responde `403 Upgrade to GitHub Team to enable this feature`, independentemente de os repositórios serem públicos ou privados. Até o upgrade, a nomenclatura vale por convenção e pela CI deste repositório.
+Rulesets de **organização** exigem o plano Team. Verificado contra a API: `gh api
+orgs/c4u-edu/rulesets` responde `403 Upgrade to GitHub Team to enable this feature`,
+independentemente de os repositórios serem públicos ou privados. Até o upgrade, a
+nomenclatura vale por convenção e pela CI deste repositório.
 
-Rulesets de **repositório** são gratuitos em repositórios públicos, e é por isso que `repo-github-default.json` vale hoje.
+Rulesets de **repositório** são gratuitos em repositórios públicos. É por isso que
+`repo-github-default.json` não depende do upgrade de plano — ele passa a valer assim que
+for publicado (veja "Aplicar" abaixo), diferente dos dois rulesets de organização acima.
 
 ## Fonte da verdade
 

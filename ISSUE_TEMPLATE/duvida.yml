@@ -1,0 +1,32 @@
+name: "❓ Dúvida sobre o conteúdo"
+description: Pergunte sobre o conteúdo de uma entrega — curso, workshop, palestra, evento ou material.
+title: "[DÚVIDA] "
+labels: ["dúvida"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Pergunte aqui em vez de por e-mail: quem chegar depois de você com a mesma dúvida
+        encontra a resposta pronta. Acesso, matrícula e certificado não são conteúdo —
+        esses assuntos vão para `support@edu.coding4u.tech`.
+  - type: input
+    id: entrega
+    attributes:
+      label: 📦 Entrega
+      description: Repositório ou nome da entrega a que a dúvida se refere.
+      placeholder: "Ex: c4u-go-workshop"
+    validations:
+      required: true
+  - type: textarea
+    id: duvida
+    attributes:
+      label: ❓ Sua dúvida
+    validations:
+      required: true
+  - type: textarea
+    id: tentativa
+    attributes:
+      label: 🔍 O que você já tentou
+      description: Opcional. O que já tentou ou onde travou — ajuda a responder mais rápido.
+    validations:
+      required: false

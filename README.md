@@ -18,15 +18,17 @@ educacional tem formas demais para caber em uma estrutura única.
 | Diretório / Arquivo | Descrição |
 | :--- | :--- |
 | 📁 [profile/](profile/) | Contém o [profile/README.md](profile/README.md) exibido na home da organização. |
-| 📁 [ISSUE_TEMPLATE/](ISSUE_TEMPLATE/) | Formulários para propor entregas e reportar erros em material. |
-| 📁 [PULL_REQUEST_TEMPLATE/](PULL_REQUEST_TEMPLATE/) | Template padrão de Pull Request. |
+| 📁 [ISSUE_TEMPLATE/](ISSUE_TEMPLATE/) | Formulários para propor entregas, tirar dúvidas e reportar erros em material. |
+| 📜 [.github/pull_request_template.md](.github/pull_request_template.md) | Template padrão de Pull Request. |
+| 📁 [.github/workflows/](.github/workflows/) | Workflow de CI que roda os scripts de teste. |
 | 📁 [rulesets/](rulesets/) | Regras de plataforma versionadas como código. |
 | 📁 [properties/](properties/) | Custom properties da organização. |
 | 📁 [scripts/](scripts/) | Testes das normas: nomenclatura, metadados, links e sincronismo. |
-| 📜 [CONTRIBUTING.md](CONTRIBUTING.md) | As normas: nomenclatura, metadados, visibilidade, branches. |
+| 📜 [CONTRIBUTING.md](CONTRIBUTING.md) | As normas: nomenclatura, metadados, visibilidade, branches, licenciamento. |
 | 📜 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) | Código de conduta. |
 | 📜 [SECURITY.md](SECURITY.md) | Reporte responsável de falhas de segurança. |
 | 📜 [SUPPORT.md](SUPPORT.md) | Canais de suporte. |
+| 📜 [CODEOWNERS](CODEOWNERS) | Donos das normas, por caminho. |
 
 ---
 
@@ -35,9 +37,11 @@ educacional tem formas demais para caber em uma estrutura única.
 Repositórios desta organização nascem **públicos** — material educacional existe para
 circular, e repositório aberto dispensa gerenciar convite de aluno um a um.
 
-A nomenclatura vale hoje **por convenção**, verificada pela CI deste repositório. Rulesets
-de organização exigem o plano Team, então o bloqueio na criação só passa a valer no dia do
-upgrade — os arquivos já estão versionados em [rulesets/](rulesets/), prontos para isso.
+A nomenclatura vale hoje **por convenção**; a CI deste repositório garante apenas que a
+regra publicada aqui e o ruleset em [rulesets/](rulesets/) não divirjam, não que os nomes
+reais de repositório a sigam. Rulesets de organização exigem o plano Team, então o
+bloqueio na criação só passa a valer no dia do upgrade — os arquivos já estão versionados,
+prontos para isso.
 
 Antes de criar um repositório, leia a seção de
 [nomenclatura](CONTRIBUTING.md#nomenclatura-de-repositórios).

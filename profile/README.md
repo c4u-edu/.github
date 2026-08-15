@@ -9,6 +9,7 @@ Material aberto é a norma — é para isso que ele existe.
 * [Normas da organização](https://github.com/c4u-edu/.github/blob/HEAD/CONTRIBUTING.md)
 * [Código de Conduta](https://github.com/c4u-edu/.github/blob/HEAD/CODE_OF_CONDUCT.md)
 * [Política de Segurança](https://github.com/c4u-edu/.github/blob/HEAD/SECURITY.md)
+* [Suporte](https://github.com/c4u-edu/.github/blob/HEAD/SUPPORT.md)
 
 ## 🔎 Como ler os nomes dos repositórios
 
@@ -20,7 +21,7 @@ Material aberto é a norma — é para isso que ele existe.
 | `workshop` | Mão na massa, sessão curta |
 | `palestra` | Exposição, sessão única |
 | `evento` | Realização com programação múltipla |
-| `material` | Conteúdo avulso: ebook, exercícios, artigo |
+| `material` | Conteúdo que não é uma realização: ebook, exercícios, artigo |
 
 Assim, `c4u-go-workshop` é um workshop de Go de iniciativa própria, e
 `tdc-clean-code-palestra` é uma palestra que demos no TDC.

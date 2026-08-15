@@ -11,11 +11,12 @@ set -euo pipefail
 
 ORG="${ORG:-c4u-edu}"
 
-plano=$(gh api "orgs/$ORG" --jq '.plan.name')
-if [ "$plano" = "free" ]; then
-  echo "ERRO: a organização $ORG está no plano 'free'." >&2
-  echo "Rulesets de organização exigem o plano Team — não há como publicá-los agora." >&2
-  echo "Até o upgrade, a nomenclatura vale por convenção e pela CI deste repositório." >&2
+# Um token sem visibilidade de `.plan` devolve `null`; tratar como insuficiente é o lado seguro.
+plano=$(gh api "orgs/$ORG" --jq '.plan.name // "desconhecido"')
+if [ "$plano" != "team" ] && [ "$plano" != "enterprise" ]; then
+  echo "ERRO: a organização $ORG está no plano '$plano'." >&2
+  echo "Rulesets de organização exigem o plano Team ou superior." >&2
+  echo "Até lá, a nomenclatura vale por convenção e pela CI deste repositório." >&2
   exit 1
 fi
 

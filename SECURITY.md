@@ -11,7 +11,8 @@ Verifique que o material não contém:
 * Credenciais, tokens ou chaves de API — inclusive em prints de tela e gravações.
 * Dados pessoais de alunos ou participantes.
 * Material sob NDA, dados ou propriedade intelectual de cliente. Se contiver, a entrega
-  **nasce privada**, conforme as [normas da organização](CONTRIBUTING.md).
+  **nasce privada**, conforme as
+  [normas da organização](https://github.com/c4u-edu/.github/blob/HEAD/CONTRIBUTING.md).
 
 O secret scanning do GitHub é ativo em repositórios públicos e cobre parte das
 credenciais. Ele não cobre dado de aluno nem material sob NDA.

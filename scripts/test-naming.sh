@@ -34,8 +34,11 @@ VALIDOS=(
 #     hackathon, mentoria), que é o erro mais provável de quem cria um repositório;
 #   - segmentos de menos;
 #   - todos os sufixos proibidos, incluindo -final e -copia;
-#   - maiúsculas, sublinhado e prefixos de ambiente;
-#   - edição malformada (mês onde só cabe sequência de 1 a 9, ano de dois dígitos).
+#   - maiúsculas, sublinhado e os sete prefixos de ambiente proibidos;
+#   - edição malformada (mês onde só cabe sequência de 1 a 9, ano de dois dígitos,
+#     sequência 0 — fora de `[1-9]`, o off-by-one clássico);
+#   - tema ausente (contexto + formato + edição, sem o segmento livre do meio);
+#   - qualificador depois do formato, e formato pluralizado.
 INVALIDOS=(
   c4u-go-treinamento c4u-go-hackathon c4u-go-mentoria
   workshop-go c4u-workshop
@@ -43,7 +46,11 @@ INVALIDOS=(
   c4u-go-workshop-old c4u-go-workshop-new c4u-go-workshop-bkp c4u-go-workshop-backup
   C4U-Go-Workshop c4u_go_workshop
   dev-go-workshop test-go-workshop qa-go-workshop hml-go-workshop
-  c4u-go-workshop-2026-10 c4u-go-workshop-26
+  stg-go-workshop prd-go-workshop prod-go-workshop
+  c4u-go-workshop-2026-10 c4u-go-workshop-26 c4u-go-workshop-2026-0
+  acme-curso-2026
+  c4u-go-workshop-avancado
+  c4u-go-workshops
 )
 
 falhas=0

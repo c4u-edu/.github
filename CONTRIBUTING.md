@@ -97,8 +97,12 @@ Duas exceções:
 
 ## O mínimo dentro do repositório
 
-Um arquivo obrigatório: o `README.md`, com um bloco de identidade no topo. Quatro campos,
-que respondem o que alguém precisa saber antes de abrir qualquer outra coisa.
+Entrega pública carrega dois arquivos obrigatórios: `README.md` e `LICENSE`. Entrega
+privada carrega só o `README.md` — sem `LICENSE`, todos os direitos ficam reservados por
+padrão, que é a postura correta para material de cliente.
+
+O `README.md` leva um bloco de identidade no topo. Quatro campos, que respondem o que
+alguém precisa saber antes de abrir qualquer outra coisa.
 
 ```markdown
 # Workshop de Go para APIs
@@ -119,6 +123,19 @@ mesma árvore para os dois é a padronização que faz as pessoas contornarem a 
 
 Recomendado: ignore `docs/superpowers/` e `.superpowers/` no `.gitignore`. Cada pessoa usa
 o framework de SDD que preferir, e artefato de agente não é material didático.
+
+## Licenciamento
+
+Material educacional — slides, texto, exercícios — sob **CC BY 4.0**: qualquer pessoa pode
+usar, adaptar e dar aula a partir dele, inclusive comercialmente, desde que credite a
+Coding4u. Essa circulação é o objetivo — é para isso que o material é público.
+
+Código de exemplo e projeto sob **MIT**. Licença Creative Commons não foi feita para
+software, então uma entrega que mistura slides e código não tem uma licença só: precisa
+dizer qual cobre o quê. Uma seção `## Licença` no `README.md` da entrega faz isso.
+
+Entrega privada não carrega `LICENSE`. Sem um, todos os direitos ficam reservados por
+padrão — a postura correta para material de cliente.
 
 ## Branches e commits
 
