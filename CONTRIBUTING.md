@@ -82,8 +82,8 @@ recurso de arquivar.
 
 ## Visibilidade
 
-**Público por padrão.** Material educacional existe para circular, e é a visibilidade
-pública que faz as regras desta página valerem hoje.
+**Público por padrão.** Material educacional existe para circular, e repositório aberto
+dispensa gerenciar convite de aluno um a um.
 
 Duas exceções:
 
@@ -139,9 +139,13 @@ A coluna **Vale hoje?** é o estado real, não o desejado.
 
 | Regra | Como falharia | Vale hoje? |
 | :--- | :--- | :--- |
-| Nome do repositório | Bloqueado na criação pelo ruleset de organização | **Sim**, em repositórios públicos |
-| Proteção de `main` | Bloqueado pelo ruleset de organização | **Sim**, em repositórios públicos |
 | Sincronismo ruleset ↔ documentação | Falha no CI do Pull Request | **Sim**, neste repositório |
+| Proteção da branch do `.github` | Bloqueada pelo ruleset de repositório | **Sim** |
+| Nome do repositório | Bloqueado na criação pelo ruleset de organização | Não — rulesets de organização exigem o plano Team |
+| Proteção de `main` nas entregas | Bloqueada pelo ruleset de organização | Não — mesmo motivo |
 | Metadados preenchidos | Apontado em auditoria | Não — auditoria ainda não existe |
 | Bloco de identidade no README | — | Não — convenção, sem verificação |
-| Qualquer regra em repositório privado | — | Não — o plano Free não os alcança |
+
+Ou seja: hoje a nomenclatura vale **por convenção**. Os rulesets de organização estão
+versionados em [`rulesets/`](rulesets/) e passam a valer no dia do upgrade para o plano
+Team — é uma decisão de plano, não de engenharia.

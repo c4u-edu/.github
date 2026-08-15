@@ -4,13 +4,13 @@ Regras de plataforma versionadas como código.
 
 | Arquivo | Alvo | Estado hoje |
 | :--- | :--- | :--- |
-| `org-repo-naming.json` | Organização | **Aplicado** nos repositórios públicos |
-| `org-branch-protection.json` | Organização | **Aplicado** nos repositórios públicos |
-| `repo-github-default.json` | Repositório `.github` | **Aplicado** |
+| `org-repo-naming.json` | Organização | Dormente — rulesets de organização exigem o plano Team |
+| `org-branch-protection.json` | Organização | Dormente — mesmo motivo |
+| `repo-github-default.json` | Repositório `.github` | **Aplicado** — rulesets de repositório são gratuitos em repositórios públicos |
 
-No plano Free, rulesets de organização não alcançam repositórios privados. Como aqui os
-repositórios nascem públicos, as regras valem hoje — ao contrário da organização técnica,
-onde os equivalentes estão dormentes até o upgrade para o plano Team.
+Rulesets de **organização** exigem o plano Team. Verificado contra a API: `gh api orgs/c4u-edu/rulesets` responde `403 Upgrade to GitHub Team to enable this feature`, independentemente de os repositórios serem públicos ou privados. Até o upgrade, a nomenclatura vale por convenção e pela CI deste repositório.
+
+Rulesets de **repositório** são gratuitos em repositórios públicos, e é por isso que `repo-github-default.json` vale hoje.
 
 ## Fonte da verdade
 
@@ -29,9 +29,9 @@ pode não estar.
 ## Aplicar
 
 ```bash
-./rulesets/apply-org.sh                                    # rulesets de organização
+./rulesets/apply-org.sh                                    # rulesets de organização — só após upgrade para Team
 gh api -X POST repos/c4u-edu/.github/rulesets \
-  --input rulesets/repo-github-default.json                # ruleset deste repositório
+  --input rulesets/repo-github-default.json                # ruleset deste repositório — funciona hoje
 ```
 
 ## Testar
