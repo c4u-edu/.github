@@ -10,7 +10,7 @@ falhas=0
 # Diferente da organização técnica, o regex daqui NÃO termina no grupo de sufixos: o
 # sufixo opcional de edição vem depois. Por isso a extração é por grupo, não por âncora.
 sufixos_regex=$(jq -r '.rules[] | select(.parameters.name=="estrutura") | .parameters.pattern' "$RULESET" \
-  | grep -oE '\(([a-z]+\|)+[a-z]+\)' | tr -d '()' | tr '|' '\n' | sort)
+  | grep -oE '\(([a-z]+\|)+[a-z]+\)' | tr -d '()' | tr '|' '\n' | sort || true)
 
 sufixos_schema=$(jq -r '.[] | select(.property_name=="formato") | .allowed_values[]' "$SCHEMA" | sort)
 
