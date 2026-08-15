@@ -68,7 +68,6 @@ if [ "$falhas" -gt 0 ]; then
 fi
 
 for arquivo in rulesets/org-repo-naming.json rulesets/org-branch-protection.json rulesets/repo-github-default.json; do
-  [ -f "$arquivo" ] || continue
   if ! jq -e '.name and .target and .enforcement and (.rules | length > 0)' "$arquivo" >/dev/null 2>&1; then
     echo "FALHA: $arquivo não tem name, target, enforcement e rules"
     falhas=$((falhas + 1))
