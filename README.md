@@ -18,7 +18,7 @@ educacional tem formas demais para caber em uma estrutura única.
 | Diretório / Arquivo | Descrição |
 | :--- | :--- |
 | 📁 [profile/](profile/) | Contém o [profile/README.md](profile/README.md) exibido na home da organização. |
-| 📁 [ISSUE_TEMPLATE/](ISSUE_TEMPLATE/) | Formulários para propor entregas, tirar dúvidas e reportar erros em material. |
+| 📁 [.github/ISSUE_TEMPLATE/](.github/ISSUE_TEMPLATE/) | Formulários para propor entregas, tirar dúvidas e reportar erros em material. |
 | 📜 [.github/pull_request_template.md](.github/pull_request_template.md) | Template padrão de Pull Request. |
 | 📁 [.github/workflows/](.github/workflows/) | Workflow de CI que roda os scripts de teste. |
 | 📁 [rulesets/](rulesets/) | Regras de plataforma versionadas como código. |
