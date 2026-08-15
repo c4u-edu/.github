@@ -1,0 +1,24 @@
+name: checks
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  normas:
+    runs-on: ubuntu-latest
+    steps:
+      # Clone raso basta: nenhum passo aqui resolve intervalo de commits. Diferente da
+      # organização técnica, não há validação de mensagem de commit — commits são livres.
+      - uses: actions/checkout@v4
+      - name: Nomenclatura
+        run: ./scripts/test-naming.sh
+      - name: Custom properties
+        run: ./scripts/test-properties.sh
+      - name: Links
+        run: ./scripts/check-links.sh
+      - name: Sincronismo ruleset ↔ documentação
+        run: ./scripts/check-ruleset-doc-sync.sh
