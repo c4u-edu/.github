@@ -1,0 +1,15 @@
+[
+  {
+    "property_name": "contexto",
+    "value_type": "string",
+    "required": false,
+    "description": "Quem contratou ou hospeda a entrega. Use c4u em iniciativa própria e o identificador curto do cliente, parceiro ou evento anfitrião nos demais. Igual ao primeiro segmento do nome do repositório."
+  },
+  {
+    "property_name": "formato",
+    "value_type": "single_select",
+    "required": false,
+    "description": "Formato da entrega educacional, igual ao sufixo do nome do repositório.",
+    "allowed_values": ["curso", "workshop", "palestra", "evento", "material"]
+  }
+]
