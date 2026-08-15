@@ -1,0 +1,9 @@
+# Artefatos de trabalho de agentes — locais, nunca versionados
+docs/superpowers/
+.superpowers/
+
+# Configuração local de sessão (sobrescrita pessoal)
+.claude/settings.local.json
+
+# macOS
+.DS_Store

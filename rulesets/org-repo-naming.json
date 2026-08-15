@@ -1,0 +1,31 @@
+{
+  "name": "nomenclatura-de-repositorios",
+  "target": "repository",
+  "enforcement": "active",
+  "conditions": {
+    "repository_name": {
+      "include": ["~ALL"],
+      "exclude": [".github"]
+    }
+  },
+  "rules": [
+    {
+      "type": "repository_name",
+      "parameters": {
+        "name": "estrutura",
+        "negate": false,
+        "operator": "regex",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)+-(curso|workshop|palestra|evento|material)(-[0-9]{4}(-[1-9])?)?$"
+      }
+    },
+    {
+      "type": "repository_name",
+      "parameters": {
+        "name": "proibicoes",
+        "negate": true,
+        "operator": "regex",
+        "pattern": "^(dev|hml|stg|prd|prod|test|qa)-|-(v[0-9]+|old|new|bkp|backup|final|copia)$"
+      }
+    }
+  ]
+}
